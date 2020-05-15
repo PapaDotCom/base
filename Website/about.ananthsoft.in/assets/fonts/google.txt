@@ -1,0 +1,7 @@
+HTML:
+<link href="https://fonts.googleapis.com/css?family=Audiowide|Changa|Open+Sans|Orbitron|Oxanium|Parisienne|Quicksand|Righteous|Roboto|Sen|Spartan|Ubuntu&display=swap" rel="stylesheet">
+	
+CSS:
+<style>
+@import url('https://fonts.googleapis.com/css?family=Audiowide|Changa|Open+Sans|Orbitron|Oxanium|Parisienne|Quicksand|Righteous|Roboto|Sen|Spartan|Ubuntu&display=swap');
+</style>

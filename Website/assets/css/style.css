@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css?family=Audiowide|Changa|Open+Sans|Orbitron|Oxanium|Parisienne|Quicksand|Righteous|Roboto|Sen|Spartan|Ubuntu&display=swap');
+
+body {
+    background-color: #111;
+    border: 0;
+    margin: 0;
+}
+
+.title {
+    color: white;
+    margin: 0;
+    padding: 12px;
+    font-size: 36px;
+    font-family: "Sen";
+    text-align: center;
+}
+
+.menu {
+    height: 50px;
+}
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.menu li {
+    float: left;
+    height: 50px;
+}
+
+.menu li:last-child {
+    float: right;
+}
+
+.menu li a {
+    display: block;
+    color: white;
+    background-color: #222;
+    font-size: 16px;
+    padding: 15px;
+    font-family: "Sen";
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.menu ul li a:hover {
+    background-color: #02d00d;
+    font-weight: bold;
+}
+.menu ul li .active {
+    background-color: #02d00d;
+    font-weight: bold;
+}
+
+.logo {
+    height: 500px;
+    background-repeat: no-repeat;
+    background-image: url("images/back.svg"), url("images/logo.png");
+    background-position: center;
+}
+
+.circles {
+    overflow: hidden;
+    width: 366px;
+    height: 500px;
+    margin: 0;
+    position: relative;
+}
+
+.circle {
+    position: absolute;
+    left: 0;
+    top: 70px;
+    animation: rotation 1s infinite linear;
+}
+:nth-child(1).circle{
+    animation-duration: 30s;
+}
+:nth-child(2).circle{
+    animation-duration: 40s;
+}
+:nth-child(3).circle{
+    animation-duration: 50s;
+}
+:nth-child(4).circle{
+    animation-duration: 60s;
+}
+:nth-child(5).circle{
+    animation-duration: 70s;
+}
+:nth-child(6).circle{
+    animation-duration: 80s;
+}
+:nth-child(7).circle{
+    animation-duration: 90s;
+}
+:nth-child(8).circle{
+    animation-duration: 100s;
+}
+:nth-child(9).circle{
+    animation-duration: 110s;
+}  
+:nth-child(10).circle{
+    animation-duration: 120s;
+}
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+}
+ 
+
+h1 {
+    text-align: center;
+    font-family: "Sen";
+    font-size: 36px;
+    color: #00abcb;
+}
+
+.text {
+    padding-left: 5%;
+    padding-right: 5%;
+    font-family: "Sen";
+    font-size: 20px;
+    color: white;
+    opacity: 0.9;
+}
+
+button {
+    border: 0;
+    border-radius: 50px;
+    padding: 8px 12px;
+    font-family: "Sen";
+    font-size: 18px;
+    background-color: #24292e;
+    color: white;
+}
+
+.footer {
+    border: 0;
+    background-color: rgb(12, 12, 12);
+}
+
+.contact {
+    color: white;
+    font-family: "Sen";
+    font-size: 16px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.contact a {
+    color: #00aaff;
+    text-decoration: none;
+}
+
+.copy {
+    color: white;
+    font-family: "Sen";
+    text-align: center;
+    padding: 20px;
+}

@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Audiowide|Changa|Open+Sans|Orbitron|Oxanium|Parisienne|Quicksand|Righteous|Roboto|Sen|Spartan|Ubuntu&display=swap');
+body {
+    background-color: #111;
+    border: 0;
+    margin: 0;
+}
+
+.title {
+    color: white;
+    margin: 0;
+    padding: 12px;
+    font-size: 36px;
+    font-family: "Sen";
+    text-align: center;
+}
+
+.menu {
+    height: 50px;
+}
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.menu li {
+    float: left;
+    height: 50px;
+}
+
+.menu li:last-child {
+    float: right;
+}
+
+.menu li a {
+    display: block;
+    color: white;
+    background-color: #222;
+    font-size: 16px;
+    padding: 15px;
+    font-family: "Sen";
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.menu ul li a:hover {
+    background-color: #02d00d;
+    font-weight: bold;
+}
+.menu ul li .active {
+    background-color: #02d00d;
+    font-weight: bold;
+}
+
+h2 {
+    color: white;
+    font-family: "Sen";
+    padding: 15px 0 5px 0;
+    margin: 15px 0 5px 0;
+    font-size: 35px;
+}
+
+.form p {
+    color: white;
+    font-family: "Sen";
+    padding: 15px 0 5px 0;
+    margin: 15px 0 5px 0;
+    font-size: 20px;
+}
+
+input {
+    border: 0;
+    font-size: 16px;
+    font-family: "Sen";
+    border-radius: 50px;
+    padding: 5px 10px;
+    opacity: 0.9;
+    height: 24px;
+    width: 300px;
+}
+
+textarea {
+    border: 0;
+    font-size: 16px;
+    font-family: "Sen";
+    border-radius: 15px;
+    padding: 5px 10px;
+    opacity: 0.9;
+    height: 96px;
+    width: 296px;
+}
+
+button {
+    border: 0;
+    border-radius: 50px;
+    padding: 10px 30px;
+    margin: 25px 0 25px 0;
+    font-family: "Sen";
+    font-size: 16px;
+    background-color: #24292e;
+    color: white;
+}
+
+.message {
+    font-family: "Sen";
+    font-size: 16px;
+    padding: 20px;
+    color: #02d00d;
+}
+
+.footer {
+    border: 0;
+    background-color: rgb(12, 12, 12);
+}
+
+.contact {
+    color: white;
+    font-family: "Sen";
+    font-size: 16px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.contact a {
+    color: #00aaff;
+    text-decoration: none;
+}
+
+.copy {
+    color: white;
+    font-family: "Sen";
+    text-align: center;
+    padding: 20px;
+}
