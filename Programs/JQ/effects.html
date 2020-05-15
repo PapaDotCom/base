@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Select element</title>
+    <style>
+        .bluebox {
+            background-color: #355795;
+            color: white;
+            height: auto;
+            width: auto;
+        }
+
+        .yellowbox {
+            background-color: rgb(220, 240, 80);
+            height: auto;
+            width: auto;
+        }
+
+        .greenbox {
+            background-color: #31af37;
+            height: auto;
+            width: auto;
+        }
+
+        .book {
+            color: black;
+        }
+
+        .font {
+            font-size: 24px;
+        }
+    </style>
+    <script src="src/jquery.js"></script>
+</head>
+
+<body>
+    <button id="buttonfacebookfadeout">Facebook fade out</button>
+    <button id="buttonfacebookfadein">Facebook fade in</button>
+    <button id="buttonfacebookfadetoggle">Facebook fade toggle</button>
+    <button id="buttonanimate">Animate</button>
+    <div id="facebook" class="bluebox">
+        <p>Face<span class="book" id="book">book.</span></p>
+        <p id="paragraph">Paragraph</p>
+        <p>Another paragraph</p>
+    </div>
+    <div id="apple" class="yellowbox font">
+        <p>Apple.</p>
+    </div>
+    <div id="microsoft" class="greenbox">
+        <p>Microsoft.</p>
+        <ul>
+            <li>Windows 7</li>
+            <li>Windows 8</li>
+            <li>Windows 10</li>
+        </ul>
+        </table>
+    </div>
+    <script>
+        $(function () {
+            $("#buttonfacebookfadeout").click(function () {
+                // $("#facebook").fadeOut("slow");
+                // $("#facebook").fadeOut(1000);
+                $("#facebook").fadeOut(1000, function () {
+                    window.alert("Hii!")
+                });
+            });
+
+            $("#buttonfacebookfadein").click(function () {
+                // $("#facebook").fadeIn("slow");
+                $("#facebook").fadeIn(1000);
+            });
+
+            $("#buttonfacebookfadetoggle").click(function () {
+                // $("#facebook").fadeToggle("slow");
+                $("#facebook").fadeToggle(1000);
+            });
+
+            // $("#buttonanimate").click(function () {
+            //     $("#facebook").animate({
+            //         width: "200px",
+            //         height: "200px",
+            //         opacity: 0.5
+            //     }, 3000);
+            // });
+
+            $("#buttonanimate").click(function () {
+                $("#facebook").animate({ width: "200px" },"slow");
+                $("#facebook").animate({ width: "100px" },"slow");
+                $("#facebook").animate({ width: "300px" },"slow");
+                $("#facebook").delay(3000).animate({ width: "100px" },"slow");
+            });
+
+        });
+    </script>
+</body>
+
+</html>

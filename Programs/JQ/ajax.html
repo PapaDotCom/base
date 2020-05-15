@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Select element</title>
+    <style>
+        .bluebox {
+            background-color: #355795;
+            color: white;
+            height: auto;
+            width: auto;
+        }
+
+        .yellowbox {
+            background-color: rgb(220, 240, 80);
+            height: auto;
+            width: auto;
+        }
+
+        .greenbox {
+            background-color: #31af37;
+            height: auto;
+            width: auto;
+        }
+
+        .book {
+            color: black;
+        }
+
+        .font {
+            font-size: 24px;
+        }
+    </style>
+    <script src="src/jquery.js"></script>
+</head>
+
+<body>
+    <button id="buttonfacebook">Facebook</button>
+    <div id="facebook" class="bluebox">
+        <p>Face<span class="book" id="book">book.</span></p>
+        <p id="paragraph">Paragraph</p>
+        <p>Another paragraph</p>
+    </div>
+    <div id="apple" class="yellowbox font">
+        <p>Apple.</p>
+    </div>
+    <div id="microsoft" class="greenbox">
+        <p>Microsoft.</p>
+        <ul>
+            <li>Windows 7</li>
+            <li>Windows 8</li>
+            <li>Windows 10</li>
+        </ul>
+        </table>
+    </div>
+    <script>
+        $(function () {
+            $("#facebook").load("ajax/text.txt");
+            $("#apple").load("ajax/text.txt #paragraph1");
+            $("#buttonfacebook").click(function(){
+                // $.ajax({
+                //     url:"ajax/text.txt",
+                //     success:function(data) {
+                //         $("#microsoft").html(data);
+                //     }
+                // });
+                $.ajax({
+                    url:"ajax/text.txt"
+                }).done(function(data){
+                    $("#microsoft").html(data);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

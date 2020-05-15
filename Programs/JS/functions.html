@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>functions</title>
+        <style>
+            .bluebox {
+                background-color: #355795;
+                color: white;
+                height: 100px;
+                width: auto;
+            }
+            .yellowbox {
+                background-color: rgb(220, 240, 80);
+                height: 100px;
+                width: auto;
+            }
+            .greenbox {
+                background-color: #31af37;
+                height: 100px;
+                width: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bluebox" id="facebook">
+            <p>Facebook.</p>
+        </div>
+        <div class="yellowbox" id="apple">
+            <p>Apple.</p>
+        </div>
+        <div class="greenbox" id="microsoft">
+            <p>Microsoft.</p>
+        </div>
+        <br/>
+        <button id="button1" onclick="swap('facebook','apple')">Swap content of facebook and apple</button>
+        <button id="button2" onclick="swap('apple','microsoft')">Swap content of apple and microsoft</button>
+        <button id="button3" onclick="swap('microsoft','facebook')">Swap content of microsoft and facebook</button>
+        <script>
+            function greeting1() {
+                window.alert("Hello");
+            }
+            // greeting1();
+
+            function greeting2(name) {
+                window.alert('Hello '+name+'!');
+            }
+            // greeting2('John');
+
+            function sum(a,b) {
+                return a+b;
+            }
+            var x=sum(3,3);
+            // window.alert(x);
+
+            function swap(id1,id2) {
+                var x=document.getElementById(id1).innerHTML;
+                var y=document.getElementById(id2).innerHTML;
+                document.getElementById(id1).innerHTML=y;
+                document.getElementById(id2).innerHTML=x;
+            }    
+        </script>
+    </body>
+</html>

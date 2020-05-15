@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>arrays</title>
+    </head>
+    <body>
+        <p id="paragraph">Javascript.</p>
+        <script>
+           var mylist= ["bread","eggs","milk"];
+        //    var mylist=new Array("bread","eggs","milk");
+        //    document.getElementById("paragraph").innerHTML = mylist;
+           
+           function result(x) {
+            document.getElementById("paragraph").innerHTML += "<br/>" + x;
+           }
+
+           result(mylist);
+           result(mylist[0]);
+           result(mylist[1]);
+           result(mylist[2]);
+        
+           mylist[1]="yogurt";
+           result(mylist);
+
+           delete mylist[1];
+           result(mylist);
+
+           mylist[1]="yogurt";
+           result(mylist);
+
+           mylist.splice(1,1);
+           result(mylist);
+
+           mylist.splice(1,0,"apple","orange");
+           result(mylist);
+
+           var sting="ABCD"
+           var array=sting.split("");
+           result(array);
+
+           var sting="Hello John"
+           var array=sting.split(" ");
+           result(array);
+
+           var array=sting.split(" ",1);
+           result(array);
+        </script>
+    </body>
+</html>

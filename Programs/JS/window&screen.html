@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>window and screen</title>
+        <style>
+            #div1 {
+                background-color: blueviolet;
+            }
+            #div2 {
+                background-color: teal;
+            }
+            #div3 {
+                background-color: blue;
+            }
+            #div4 {
+                background-color: crimson;
+            }
+            .equalbox {
+                margin-bottom: 5px; 
+            }
+        </style>
+    </head>
+    <body>
+        <div id="div1" class="equalbox">Facebook</div>
+        <div id="div2" class="equalbox">Whatsapp</div>
+        <div id="div3" class="equalbox">Messanger</div>
+        <div id="div4" class="equalbox">Gmail</div>
+        <script>
+            var windowheight=window.innerHeight;
+            // var windowheight=document.documentElement.clientHeight;
+            // var windowheight=document.body.clientHeight;
+            // window.alert(windowheight);
+
+            windowwidth=window.innerWidth;
+            //window.alert(windowwidth);
+
+            avilablescreenheight=window.screen.availHeight;
+            //window.alert(avilablescreenheight);
+            
+            for(i=1;1<5;i++) {
+                document.getElementById("div"+i).style.width=window.innerWidth-12 +'px';
+                document.getElementById("div"+i).style.height=window.innerHeight/4-8 +'px';
+            }
+        </script>
+    </body>
+</html>

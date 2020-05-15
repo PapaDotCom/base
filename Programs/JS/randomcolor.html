@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>random color</title>
+        <style>
+            .bluebox {
+                background-color: #355795;
+                color: white;
+                height: 100px;
+                width: auto;
+            }
+            .yellowbox {
+                background-color: rgb(220, 240, 80);
+                height: 100px;
+                width: auto;
+            }
+            .greenbox {
+                background-color: #31af37;
+                height: 100px;
+                width: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bluebox" id="facebook">
+            <p>Facebook.</p>
+        </div>
+        <div class="yellowbox" id="apple">
+            <p>Apple.</p>
+        </div>
+        <div class="greenbox" id="microsoft">
+            <p>Microsoft.</p>
+        </div>
+        <br/>
+        <button id="button1">Change facebook color</button>
+        <button id="button2">Change Apple color by random</button>
+        <button id="button3">Change Microsoft color</button>
+        <script>
+            var color='gray';
+            document.getElementById("button1").onclick=function() {
+                document.getElementById("facebook").style.backgroundColor=color;
+            }
+
+            var x, y, z, randomcolor;
+            document.getElementById("button2").onclick=function() {
+                x=Math.round(Math.random()*256);
+                y=Math.round(Math.random()*256);
+                z=Math.round(Math.random()*256);
+                randomcolor='rgb('+x+','+y+','+z+')';
+                document.getElementById("apple").style.backgroundColor=randomcolor;
+            }
+
+            document.getElementById("button3").onmouseover=function() {
+                document.getElementById("microsoft").style.backgroundColor='red';
+            }
+        </script>
+    </body>
+</html>

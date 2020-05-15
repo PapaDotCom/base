@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Select element</title>
+    <style>
+        .bluebox {
+            background-color: #355795;
+            color: white;
+            height: auto;
+            width: auto;
+        }
+
+        .yellowbox {
+            background-color: rgb(220, 240, 80);
+            height: auto;
+            width: auto;
+        }
+
+        .greenbox {
+            background-color: #31af37;
+            height: auto;
+            width: auto;
+        }
+
+        .book {
+            color: black;
+        }
+
+        .font {
+            font-size: 24px;
+        }
+    </style>
+    <script src="src/jquery.js"></script>
+</head>
+
+<body>
+    <button id="buttonfacebook">Change facebook style</button>
+    <button id="buttonapple">Change apple style</button>
+    <button id="buttonmicrosoft">Change microsoft style</button>
+    <button id="buttonmicrosoftshow">Show microsoft</button>
+    <button id="buttonbook">Change book style</button>
+    <div id="facebook" class="bluebox">
+        <p>Face<span class="book" id="book">book.</span></p>
+        <p id="paragraph">Paragraph</p>
+        <p>Another paragraph</p>
+    </div>
+    <div id="apple" class="yellowbox font">
+        <p>Apple.</p>
+    </div>
+    <div id="microsoft" class="greenbox">
+        <p>Microsoft.</p>
+        <ul>
+            <li>Windows 7</li>
+            <li>Windows 8</li>
+            <li>Windows 10</li>
+        </ul>
+        </table>
+    </div>
+    <script>
+        $(function () {
+            $("#buttonfacebook").click(function () {
+                $("#facebook").css("width", 100 * Math.random() - 50 + $(".bluebox").width());
+                $("#facebook").addClass("greenbox");
+                // window.alert($("#facebook").innerHeight());
+                // window.alert($("#facebook").outerHeight());
+            });
+
+            $("#buttonapple").click(function () {
+                // $("#apple").removeClass("yellowbox");
+                $("#apple").removeClass("font");
+            });
+
+            $("#apple").click(function () {
+                $("#apple").css("position", "absolute");
+                $("#apple").css({
+                    "top": 300 * Math.random(),
+                    "left": 300 * Math.random(),
+                    "background-color": "rgb(" + 256 * Math.random() + "," + 256 * Math.random() + "," + 256 * Math.random() + ")"
+                });
+            });
+
+            $("#buttonmicrosoft").click(function () {
+                $("#microsoft").toggleClass("greenbox");
+            });
+
+            $("#buttonmicrosoft").dblclick(function () {
+                $("#microsoft").hide();
+            });
+
+            $("#buttonmicrosoftshow").click(function () {
+                $("#microsoft").show();
+            });
+
+            $("#buttonbook").click(function () {
+                $("#book").wrap('<div id="divbook"></div>');
+            });
+        });
+    </script>
+</body>
+
+</html>

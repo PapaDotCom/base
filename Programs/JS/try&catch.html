@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>try and catch</title>
+        <style>
+            #error {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="error"></p>
+        <script>
+        try {
+            sum(3,4);
+        }
+        catch(err) {
+            document.getElementById("error").innerHTML=err.message;
+        }   
+        </script>
+    </body>
+</html>

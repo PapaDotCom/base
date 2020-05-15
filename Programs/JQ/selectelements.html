@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Select element</title>
+        <style>
+            .bluebox {
+                background-color: #355795;
+                color: white;
+                height: auto;
+                width: auto;
+            }
+            .yellowbox {
+                background-color: rgb(220, 240, 80);
+                height: auto;
+                width: auto;
+            }
+            .greenbox {
+                background-color: #31af37;
+                height: auto;
+                width: auto;
+            }
+            .book{
+                color: black;
+            }
+        </style>
+        <script src="src/jquery.js"></script>
+    </head>
+    <body>
+        <div class="bluebox">
+            <p>Face<span class="book">book</span>.</p>
+            <p id="paragraph">Paragraph</p>
+            <p>Another paragraph</p>
+        </div>
+        <div class="yellowbox">
+            <p>Apple.</p>
+            <p><a href="www.google.com">Link</a></p>
+            <p><a href="www.microsoft.com">Another link</a></p>          
+        </div>
+        <div class="greenbox">
+            <p>Microsoft.</p>
+            <ul>
+                <li>Windows 7</li>
+                <li>Windows 8</li>
+                <li>Windows 10</li>
+            </ul>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Make</th>
+                    <th>Model</th>
+                </tr>
+                <tr>
+                    <td>Laptop</td>
+                    <td>Lenovo</td>
+                    <td>340</td>
+                </tr>
+                <tr>
+                    <td>PC</td>
+                    <td>Lenovo</td>
+                    <td>E20</td>
+                </tr>
+                <tr>
+                    <td>PC</td>
+                    <td>HP</td>
+                    <td>H2</td>
+                </tr>
+                <tr>
+                    <td>PC</td>
+                    <td>Lenovo</td>
+                    <td>D40</td>
+                </tr>
+                <p>Type your name : <input><button type="submit">Submit</button></p>
+            </table>
+        </div>
+        <script>
+            $(function(){
+                $("*").css("font-size","16px");
+                $("div").css("text-align","center");
+                $(".book").css("color","red");
+                $("#paragraph").css("background-color","black");
+                $("div p:last-child").css("color","red");
+                // $("div p:first-child,last-child").css("color","red");
+                $("[href]").css("color","gray");
+                $("li:first-child").css("background-color","white");
+                $("li:last-child").css("background-color","blue");
+                $("tr:even").css("background-color","gray");
+                $("tr:odd").css("background-color","white");
+                $(":input").css("background-color","silver");
+                $(":submit").css("background-color","gray");
+                $("div:has(table)").css("background-color","skyblue");
+            });
+        </script>
+    </body>
+</html>

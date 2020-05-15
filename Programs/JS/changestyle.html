@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>change style</title>
+        <style>
+            .bluebox {
+                background-color: #355795;
+                color: white;
+                height: 100px;
+                width: auto;
+            }
+            .yellowbox {
+                background-color: rgb(220, 240, 80);
+                height: 100px;
+                width: auto;
+            }
+            .greenbox {
+                background-color: #31af37;
+                height: 100px;
+                width: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bluebox" id="facebook">
+            <p>Facebook.</p>
+        </div>
+        <div class="yellowbox" id="apple">
+            <p>Apple.</p>
+        </div>
+        <div class="greenbox" id="microsoft">
+            <p>Microsoft.</p>
+        </div>
+        <br/>
+        <button id="button1">Change facebook style</button>
+        <button id="button2">Change Apple style</button>
+        <button id="button3">Change Microsoft style</button>
+        <script>
+            document.getElementById("button1").onclick=function() {
+                document.getElementById("facebook").style.width='200px';
+            }
+            document.getElementById("button2").ondblclick=function() {
+                document.getElementById("apple").style.fontFamily='monospace';
+                document.getElementById("apple").style.fontSize='3em'
+                document.getElementById("apple").style.height='200px'
+            }
+            document.getElementById("button3").onmouseover=function() {
+                document.getElementById("microsoft").style.backgroundColor='red';
+            }
+        </script>
+    </body>
+</html>

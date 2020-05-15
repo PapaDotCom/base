@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Select element</title>
+        <style>
+            .bluebox {
+                background-color: #355795;
+                color: white;
+                height: auto;
+                width: auto;
+            }
+            .silverbox {
+                background-color:silver;
+                height: auto;
+                width: auto;
+            }
+            .greenbox {
+                background-color: #31af37;
+                height: auto;
+                width: auto;
+            }
+            .book{
+                color: black;
+            }
+        </style>
+        <script src="src/jquery.js"></script>
+    </head>
+    <body>
+        <div class="bluebox">
+            <p>Face<span class="book">book</span>.</p>
+            <p id="paragraph">Paragraph</p>
+            <p>Another paragraph</p>
+        </div>
+        <div class="silverbox">
+            <p id="apple">Apple.</p>
+            <p><a id="linkgoogle" href="https://www.google.com">Link</a></p>
+            <p><a id="linkmicrosoft" href="https://www.microsoft.com">Another link</a></p>          
+        </div>
+        <div class="greenbox">
+            <p>Microsoft.</p>
+            <ul>
+                <li>Windows 7</li>
+                <li>Windows 8</li>
+                <li>Windows 10</li>
+            </ul>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Make</th>
+                    <th>Model</th>
+                </tr>
+                <tr>
+                    <td>Laptop</td>
+                    <td>Lenovo</td>
+                    <td>340</td>
+                </tr>
+                <tr>
+                    <td>PC</td>
+                    <td>Lenovo</td>
+                    <td>E20</td>
+                </tr>
+                <tr>
+                    <td>PC</td>
+                    <td>HP</td>
+                    <td>H2</td>
+                </tr>
+                <tr>
+                    <td>PC</td>
+                    <td>Lenovo</td>
+                    <td>D40</td>
+                </tr>
+                <p>Type your name : <input><button id="submit" type="submit">Submit</button></p>
+            </table>
+        </div>
+        <button id="buttonfacebook">Change facebook text</button>
+        <button id="buttonapple">Change Apple text</button>
+        <button id="buttonvalue">Change value</button>
+        <button id="buttonlink">Change link</button>
+        <button id="buttontext">Add text</button>
+        <script>
+            $(function() {
+                $("#buttonfacebook").click(function(){
+                    $(".bluebox").text("This is facebook");
+                });
+
+                $("#buttonapple").click(function(){
+                    $(".silverbox").html("<p>This is Apple</p><p>New iOS is available</p>");
+                });
+
+                $("#buttonvalue").click(function(){
+                    $("input").val("Name");
+                });
+
+                $("#buttonlink").click(function(){
+                    $("#linkgoogle").attr({
+                        "href":"https://www.apple.com","title":"Apple"
+                    });
+                });
+
+                $("#buttontext").click(function(){
+                    // $(".silverbox").append("<ul><li>iOS7</li><li>iOS8</li><li>iOS9</li><li>iOS10</li></ul>");
+                    // $(".silverbox").prepend("<ul><li>iOS7</li><li>iOS8</li><li>iOS9</li><li>iOS10</li></ul>");
+                    $("#apple").after("<p>This is another paragraph</p>");
+                });
+            });
+        </script>
+    </body>
+</html> 
